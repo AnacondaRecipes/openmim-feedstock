@@ -1,5 +1,5 @@
 {% set name = "openmim" %}
-{% set version = "0.3.7" %}
+{% set version = "0.3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -13,15 +13,15 @@ build:
   entry_points:
     - mim = mim.cli:cli
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
   run:
-    - python >=3.6
+    - python
     - click
     - colorama
     - model-index
@@ -43,8 +43,14 @@ test:
 about:
   home: https://github.com/open-mmlab/mim
   summary: MIM Installs OpenMMLab packages
+  description: |
+    MIM provides a unified interface for launching and installing OpenMMLab projects and their extensions, and managing
+    the OpenMMLab model zoo.
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
+  doc_url: https://github.com/open-mmlab/mim
+  dev_url: https://github.com/open-mmlab/mim
 
 extra:
   recipe-maintainers:
