@@ -32,13 +32,17 @@ requirements:
     - tabulate
 
 test:
+  source_files:
+    - tests
   imports:
     - mim
   commands:
     - pip check
     - mim --help
+    - pytest tests
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/open-mmlab/mim
