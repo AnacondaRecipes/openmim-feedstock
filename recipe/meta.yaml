@@ -18,9 +18,14 @@ build:
   number: 0
 
 requirements:
+  build:
+    - m2-patch  # [win]
+    - patch  # [unix]
   host:
     - python
     - pip
+    - setuptools
+    - wheel
   run:
     - python
     - click
@@ -33,18 +38,13 @@ requirements:
     - tabulate
 
 test:
-  source_files:
-    - tests
   imports:
     - mim
   commands:
     - pip check
     - mim --help
-    - pytest tests
   requires:
     - pip
-    - pytest
-    - pytorch
 
 about:
   home: https://github.com/open-mmlab/mim
