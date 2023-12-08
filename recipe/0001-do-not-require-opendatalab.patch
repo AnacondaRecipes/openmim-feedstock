@@ -1,5 +1,5 @@
---- install.txt	2023-12-08 16:19:48.175845194 +0100
-+++ install.txt	2023-12-08 16:20:02.084094698 +0100
+--- requirements/install.txt	2023-12-08 16:19:48.175845194 +0100
++++ requirements/install.txt	2023-12-08 16:20:02.084094698 +0100
 @@ -1,7 +1,6 @@
  Click
  colorama
@@ -8,8 +8,8 @@
  pandas
  pip>=19.3
  requests
---- requires.txt	2023-12-08 16:20:53.251008223 +0100
-+++ requires.txt	2023-12-08 16:20:58.168580509 +0100
+--- openmim.egg-info/requires.txt	2023-12-08 16:20:53.251008223 +0100
++++ openmim.egg-info/requires.txt	2023-12-08 16:20:58.168580509 +0100
 @@ -1,7 +1,6 @@
  Click
  colorama
