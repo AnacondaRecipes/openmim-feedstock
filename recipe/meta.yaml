@@ -15,12 +15,9 @@ build:
   entry_points:
     - mim = mim.cli:cli
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
-  number: 0
+  number: 1
 
 requirements:
-  build:
-    - m2-patch  # [win]
-    - patch  # [unix]
   host:
     - python
     - pip
